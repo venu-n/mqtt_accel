@@ -1,11 +1,11 @@
 var connect = false;
-var usrUrl = "tcp://farmer.cloudmqtt.com"
-var usrPort = xxxxx
+var usrUrl = "tcp://farmers.cloudmqtt.com"
+var usrPort = "xx8xx"
 var topicWill = "will"
 var payloadWill = "Will Message"
-var usrUsername = "fcvxxxxx"
-var usrPassword = "frKwxxxxxxxx"
-var payloadData = "On";
+var usrUsername = "fcvpphwi"
+var usrPassword = "xxxxxxxxx"
+var payloadData = "0:0";
 var topicData = "sense"
 
 var app = {
@@ -14,7 +14,7 @@ var app = {
         this.bindEvents();
     },
     // Bind Event Listeners
-    //
+    // frKw5GCmQgjW
     // Bind any events that are required on startup. Common events are:
     // 'load', 'deviceready', 'offline', and 'online'.
     bindEvents: function() {
@@ -48,17 +48,17 @@ var app = {
     success:function(s){
         //console.log("connect success");
 		connect = true;
-		document.getElementById("activity").innerHTML += "> connect success";
+		document.getElementById("activity").innerHTML += " > connect success"+"<br>";
     },
     error:function(e){
         //console.log("connect error");
 		connect = false;
-		document.getElementById("activity").innerHTML += "> connect error";
+		document.getElementById("activity").innerHTML += " > connect error"+"<br>";
 	},
     onConnectionLost:function (){
 		connect = false;
         //console.log("disconnect");
-    document.getElementById("activity").innerHTML += "> disconnect ";
+    document.getElementById("activity").innerHTML += " > disconnect "+"<br>";
 	},
 /*     routerConfig:{
         router:routerObject //instantiated router object
@@ -83,21 +83,21 @@ var app = {
 			badges[0].innerHTML = acceleration.x;
 			badges[1].innerHTML = acceleration.y;
 			badges[2].innerHTML = acceleration.z;
-			payload_data = acceleration.x+":"+acceleration.z ;
+			payloadData = acceleration.x+":"+acceleration.z ;
 		  }
 		  
 		    function handleError() {
     alert('Error reading acceleration');
   }
   
-			  alert(payload_data);
+			  alert(payloadData);
         cordova.plugins.CordovaMqTTPlugin.publish({
         topic:topicData,
 			  payload:payloadData,
 			  qos:0,
               retain:false,
               success:function(s){
-                document.getElementById("activity").innerHTML += "[Success]"+topicData+":"+payload_data+"<br>";
+                document.getElementById("activity").innerHTML += "[Success]"+topicData+":"+payloadData+"<br>";
               },
               error:function(e){
                 document.getElementById("activity").innerHTML += "[Error] "+e+"<br>";
