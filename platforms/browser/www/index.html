@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+      <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+      <link rel="stylesheet" href="lib/onsen/css/material-design-iconic-font/css/material-design-iconic-font.css">
+      <link rel="stylesheet" href="lib/onsen/css/font_awesome/css/font-awesome.css">
+            <script src="lib/onsen/js/onsenui.js"></script>
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="cordova_plugins.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+
+      <title>Accelorometer-Mqtt</title>
+    </head>
+    <body>
+      <ons-page>
+      <div style="text-align: left; margin-top: 20px; margin-left: 20px">
+        <ons-input id="eusrUrl" placeholder="MQTT URL (use tcp://)" modifier="underbar"></ons-input>
+        <ons-input id="eusrPort" placeholder="MQTT Port" modifier="underbar"></ons-input><ons-input id="eusrUsername" placeholder="Username" modifier="underbar"></ons-input>
+        <ons-input id="eusrPassword" placeholder="Password" type="password" modifier="eunderbar"></ons-input>
+        <ons-input id="etopicData" placeholder="Topic" modifier="underbar"></ons-input>
+       <ons-button id="connect">Connect</ons-button>
+        <ons-button id="disconnect" style="display:none">Disconnect</ons-button>
+        </div>
+
+       <div style="text-align: left; margin-top: 20px; margin-left: 20px" class="container">
+         <ons-row>
+          <ons-col> Status </ons-col><ons-col> <span class="badge">Connected</span> </ons-col>
+        </ons-row>
+        <ons-row>
+          <ons-col> Accelerometer </ons-col><ons-col> <span class="badge">0:0:0</span> </ons-col>
+        </ons-row>
+        <ons-row><ons-col> Topic </ons-col><ons-col> <span class="badge">Sense </span></ons-col></ons-row> 
+        <ons-row>
+        <ons-col> Payload </ons-col><ons-col> <span class="badge">0:0:0</span> </ons-col></ons-row>
+          <ons-row>
+        <ons-col> Direction </ons-col><ons-col> <span class="badge">Forward</span> </ons-col></ons-row>      
+        <ons-row>
+        <ons-col> Activity Log </ons-col><ons-col> <span class="badge"><div id="activity"></div></span>
+        </ons-row>
+        </div>
+	  
+      </ons-page>
+
+
+    </body>
+</html>

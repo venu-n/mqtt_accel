@@ -1,48 +1,45 @@
 <!DOCTYPE html>
-<!--
-    
--->
 <html>
     <head>
-        
-        <meta http-equiv="Content-Security-Policy" content="default-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-eval'; style-src 'self' 'unsafe-inline'; media-src *">
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <title>Mqtt Test</title>
+      <link rel="stylesheet" href="lib/onsen/css/onsenui.css">
+      <link rel="stylesheet" href="lib/onsen/css/onsen-css-components.css">
+      <link rel="stylesheet" href="lib/onsen/css/material-design-iconic-font/css/material-design-iconic-font.css">
+      <link rel="stylesheet" href="lib/onsen/css/font_awesome/css/font-awesome.css">
+            <script src="lib/onsen/js/onsenui.js"></script>
+<!--       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+      <script type="text/javascript" src="cordova.js"></script>
+      <script type="text/javascript" src="cordova_plugins.js"></script>
+      <script type="text/javascript" src="js/index.js"></script>
+<!-- <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.1/build/pure-min.css" integrity="sha384-oAOxQR6DkCoMliIh8yFnu25d7Eq/PHS21PClpwjOTeU2jRSq11vu66rf90/cZr47" crossorigin="anonymous"> -->
+      <title>Accelorometer-Mqtt</title>
     </head>
     <body>
-        <div>
-
-             <button id="connect">Connect</button><button id="disconnect" style="display:none">Disconnect</button>
-             <button id="subscribe">Subscribe</button><button id="unsubscribe" style="display:none">Unsubscribe</button>
-            <button id="publish">Publish</button>
+     <ons-page> 
+<!--      <ons-row>
+          <ons-col>   <ons-input id="eusrUrl" placeholder="MQTT URL (use tcp://)" modifier="underbar"></ons-input>
+        <ons-input id="eusrPort" placeholder="MQTT Port" modifier="underbar"></ons-input> </ons-col>
+        <ons-col>
+        <ons-input id="eusrUsername" placeholder="Username" modifier="underbar"></ons-input>
+        <ons-input id="eusrPassword" placeholder="Password" type="password" modifier="eunderbar"></ons-input> </ons-col>
+        <ons-col>
+        <ons-input id="etopicData" placeholder="Topic" modifier="underbar"></ons-input> -->
+       <div style="text-align: left; margin-top: 20px; margin-left: 20px">
+       <ons-button id="connect" class="button button--outline" >Drive/Halt</ons-button>
+        <button id="disconnect" style="display:none">Disconnect</button>
         </div>
-		 <div class="container">
-    <h4>Accelerometer</h4>
-    <ul class="list-group">
-      <li class="list-group-item">
-        <span class="badge">0</span>
-        X
-      </li>
-      <li class="list-group-item">
-        <span class="badge">0</span>
-        Y
-      </li>
-      <li class="list-group-item">
-        <span class="badge">0</span>
-        Z
-      </li>
-    </ul>
-  </div>
-		
-        <div>
-            <h4>Activity Log</h4>
-            <div id="activity"></div>
-        </div>    
-        <script type="text/javascript" src="cordova.js"></script>
-		<script type="text/javascript" src="cordova_plugins.js"></script>
-        <script type="text/javascript" src="index.js"></script>
+    <div style="text-align: left; margin-top: 20px; margin-left: 20px">
+      <ons-list>
+      <ons-list-item> <div class="left"> Status: </div> <div class="right"><span class="notification" style="background-color:green"> Not Connected </span> </div></ons-list-item>
+      <ons-list-item> <div class="left"> Accelrometer: </div> <div class="right"><span class="notification" style="background-color:black">| 0 | 0 | 0 |</span> </div></ons-list-item>
+      <ons-list-item> <div class="left"> Topic: </div> <div class="right"><span class="notification" style="background-color:orange"> sense </span> </div></ons-list-item>
+      <ons-list-item> <div class="left"> Payload: </div> <div class="right"><span class="notification" style="background-color:orange"> | 0 | 0 | 0 | </span> </div></ons-list-item>
+      <ons-list-item> <div class="left"> Direction: </div> <div class="right"><span class="notification" style="background-color:green"> Forward </span> </div></ons-list-item>
+      <ons-list-item> <div class="left"> Log: </div> <div class="right"><span class="notification" style="background-color:blue"> None </span> </div></ons-list-item>
+      </ons-list>    
+
+    </div>
+
+
+	 </ons-page>
     </body>
 </html>
