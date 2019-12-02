@@ -1,7 +1,7 @@
 
 var connect = false;
-var usrUrl = "tcp://farmers.cloudmqtt.com";
-var usrPort = 141237;
+var usrUrl = "tcp://farxxx.xxxmqtt.com";
+var usrPort = 141xxx;
 var topicWill = "will";
 var payloadWill = "Will Message";
 var usrUsername = "asdf";
